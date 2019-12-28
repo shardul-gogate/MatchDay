@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		xmlns:tools="http://schemas.android.com/tools"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorPrimary"
+		android:keepScreenOn="true"
+		tools:context=".MatchActivity">
+
+	<TextView
+		android:id="@+id/etdisplay"
+		android:layout_width="wrap_content"
+		android:layout_height="50dp"
+		android:includeFontPadding="false"
+		android:fontFamily="@string/universalFont"
+		android:text="ET: 0"
+		android:textColor="@color/colorPrimaryLight"
+		android:textSize="35sp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintRight_toRightOf="parent"/>
+
+	<TextView
+			android:id="@+id/clockView"
+			android:layout_width="wrap_content"
+			android:layout_height="115dp"
+			android:layout_marginTop="25dp"
+			android:fontFamily="@string/universalFont"
+			android:includeFontPadding="false"
+			android:text="00:00"
+			android:textColor="@color/colorPrimaryLight"
+			android:textSize="90sp"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toTopOf="parent" />
+
+	<LinearLayout
+			android:id="@+id/controlBtn"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:orientation="horizontal"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/clockView">
+
+		<ImageButton
+				android:id="@+id/pauseBtn"
+				android:layout_width="55dp"
+				android:layout_height="55dp"
+				android:layout_marginRight="50dp"
+				android:background="@drawable/pausebtn" />
+
+		<ImageButton
+				android:id="@+id/resumeBtn"
+				android:layout_width="55dp"
+				android:layout_height="55dp"
+				android:background="@drawable/resumebtn" />
+
+	</LinearLayout>
+
+	<LinearLayout
+			android:id="@+id/scorebar"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			app:layout_constraintBottom_toTopOf="@id/addEvent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent"
+			app:layout_constraintTop_toBottomOf="@id/controlBtn">
+
+		<ImageView
+				android:layout_width="110dp"
+				android:layout_height="110dp"
+				android:src="@drawable/hometeam" />
+
+		<TextView
+				android:id="@+id/scorecard"
+				android:layout_width="wrap_content"
+				android:layout_height="110dp"
+				android:fontFamily="@string/universalFont"
+				android:includeFontPadding="false"
+				android:text="0-0"
+				android:textColor="@color/colorPrimaryLight"
+				android:textSize="100sp" />
+
+		<ImageView
+				android:layout_width="110dp"
+				android:layout_height="110dp"
+				android:src="@drawable/awayteam" />
+
+	</LinearLayout>
+
+	<Button
+		android:id="@+id/addEvent"
+		android:layout_width="300dp"
+		android:layout_height="wrap_content"
+		android:background="@drawable/round_button"
+		android:fontFamily="@string/universalFont"
+		android:text="Add Event"
+		android:textAllCaps="false"
+		android:textSize="40sp"
+		app:layout_constraintBottom_toTopOf="@id/highlights"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/scorebar" />
+
+	<LinearLayout
+			android:id="@+id/highlights"
+			android:layout_width="match_parent"
+			android:layout_height="wrap_content"
+			android:background="@color/colorPrimaryLight"
+			android:clickable="true"
+			android:orientation="horizontal"
+			app:layout_constraintBottom_toTopOf="@id/quitBtn"
+			app:layout_constraintTop_toBottomOf="@id/addEvent">
+
+		<TextView
+				android:id="@+id/goalMin"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="5dp"
+				android:fontFamily="@string/universalFont"
+				android:text=""
+				android:textColor="@color/colorPrimaryDark"
+				android:textSize="40sp" />
+
+		<TextView
+				android:id="@+id/goalScorer"
+				android:layout_width="wrap_content"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="12dp"
+				android:fontFamily="@string/universalFont"
+				android:text=""
+				android:textColor="@color/colorPrimaryDark"
+				android:textSize="35sp" />
+
+	</LinearLayout>
+
+	<Button
+			android:id="@+id/quitBtn"
+			android:layout_width="110dp"
+			android:layout_height="60dp"
+			android:layout_marginBottom="40dp"
+			android:background="@drawable/round_button"
+			android:fontFamily="@string/universalFont"
+			android:includeFontPadding="false"
+			android:text="Quit"
+			android:textAllCaps="false"
+			android:textColor="@color/colorPrimaryDark"
+			android:textSize="42sp"
+			app:layout_constraintBottom_toBottomOf="parent"
+			app:layout_constraintLeft_toLeftOf="parent"
+			app:layout_constraintRight_toRightOf="parent" />
+
+</android.support.constraint.ConstraintLayout>

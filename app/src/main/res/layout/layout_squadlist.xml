@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorPrimaryDark">
+
+	<TextView
+			android:id="@+id/shirtnum"
+			android:layout_width="wrap_content"
+			android:layout_height="80dp"
+			android:text="99"
+			android:textSize="62sp"
+			android:fontFamily="@string/universalFont"
+			android:layout_marginLeft="10dp"
+			android:includeFontPadding="false"
+			android:textColor="@color/colorPrimaryLight"/>
+
+	<TextView
+			android:id="@+id/firstnamedisp"
+			android:layout_width="wrap_content"
+			android:layout_height="35dp"
+			android:layout_toRightOf="@id/shirtnum"
+			android:text="@string/firstname"
+			android:fontFamily="@string/universalFont"
+			android:includeFontPadding="false"
+			android:textSize="22sp"
+			android:layout_marginLeft="20dp"
+			android:textColor="@color/colorPrimaryLight"/>
+
+	<TextView
+			android:id="@+id/lastnamedisp"
+			android:layout_width="wrap_content"
+			android:layout_height="50dp"
+			android:layout_below="@id/firstnamedisp"
+			android:layout_toRightOf="@id/shirtnum"
+			android:text="@string/lastname"
+			android:textSize="35sp"
+			android:textColor="@color/colorPrimaryLight"
+			android:layout_marginLeft="20dp"
+			android:includeFontPadding="false"
+			android:fontFamily="@string/universalFont"/>
+
+</RelativeLayout>

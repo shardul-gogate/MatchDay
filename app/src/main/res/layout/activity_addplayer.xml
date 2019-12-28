@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+		xmlns:android="http://schemas.android.com/apk/res/android"
+		xmlns:tools="http://schemas.android.com/tools"
+		xmlns:app="http://schemas.android.com/apk/res-auto"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:background="@color/colorPrimaryDark"
+		tools:context=".AddPlayer">
+
+	<TextView
+		android:id="@+id/firstnamelabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:layout_marginTop="50dp"
+		android:fontFamily="@string/universalFont"
+		android:text="@string/firstname"
+		android:textColor="@color/colorPrimaryLight"
+		android:textColorHint="@color/colorPrimaryLight"
+		android:textSize="35sp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent" />
+
+	<EditText
+		android:id="@+id/firstnamefield"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimaryLight"
+		android:inputType="text"
+		android:textSize="40sp"
+		android:textColor="@color/colorPrimaryDark"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintTop_toBottomOf="@id/firstnamelabel"
+		android:importantForAutofill="no" />
+
+	<TextView
+		android:id="@+id/lastnamelabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/firstnamefield"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginTop="20dp"
+		android:textSize="35sp"
+		android:text="@string/lastname"
+		android:fontFamily="@string/universalFont"
+		android:textColorHint="@color/colorPrimaryLight"
+		android:textColor="@color/colorPrimaryLight"/>
+
+	<EditText
+		android:id="@+id/lastnamefield"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimaryLight"
+		android:textSize="40sp"
+		android:inputType="text"
+		android:textColor="@color/colorPrimaryDark"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintTop_toBottomOf="@id/lastnamelabel"
+		android:importantForAutofill="no" />
+
+	<TextView
+		android:id="@+id/shirtlabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintTop_toBottomOf="@id/lastnamefield"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginTop="20dp"
+		android:textSize="35sp"
+		android:text="@string/shirtnum"
+		android:fontFamily="@string/universalFont"
+		android:textColorHint="@color/colorPrimaryLight"
+		android:textColor="@color/colorPrimaryLight"/>
+
+	<EditText
+		android:id="@+id/shirtfield"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:background="@color/colorPrimaryLight"
+		android:textSize="40sp"
+		android:inputType="number"
+		android:textColor="@color/colorPrimaryDark"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintTop_toBottomOf="@id/shirtlabel"/>
+
+	<LinearLayout
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/shirtfield"
+		android:layout_marginTop="60dp"
+		android:layout_marginBottom="75dp">
+
+		<Button
+			android:id="@+id/cancelplayer"
+			android:layout_width="150dp"
+			android:layout_height="75dp"
+			android:layout_marginRight="40dp"
+			android:background="@drawable/round_button"
+			android:text="Cancel"
+			android:textAllCaps="false"
+			android:fontFamily="@string/universalFont"
+			android:textSize="45sp"/>
+
+		<Button
+			android:id="@+id/saveplayerbtn"
+			android:layout_width="125dp"
+			android:layout_height="75dp"
+			android:background="@drawable/round_button"
+			android:text="Save"
+			android:textAllCaps="false"
+			android:fontFamily="@string/universalFont"
+			android:textSize="45sp"/>
+
+	</LinearLayout>
+
+</android.support.constraint.ConstraintLayout>

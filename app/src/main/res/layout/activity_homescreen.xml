@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/colorPrimary"
+        tools:context=".HomeScreen">
+
+    <ImageView
+		android:id="@+id/splashlogo"
+		android:layout_width="320dp"
+		android:layout_height="180dp"
+		android:src="@drawable/splashlogo"
+		android:scaleType="fitCenter"
+		android:transitionName="splash"
+		app:layout_constraintTop_toTopOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:contentDescription="MatchDayLogo"
+		tools:ignore="HardcodedText" />
+
+    <Button
+		android:id="@+id/hometeambtn"
+		android:layout_width="305dp"
+		android:layout_height="75dp"
+		android:background="@drawable/round_button"
+		android:backgroundTint="@color/colorSecondary"
+		android:text="@string/hometeam"
+		android:textSize="46sp"
+		android:textAllCaps="false"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintTop_toBottomOf="@id/splashlogo"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		android:layout_marginTop="28dp"/>
+
+    <Button
+		android:id="@+id/awayteambtn"
+		android:layout_width="325dp"
+		android:layout_height="75dp"
+		android:background="@drawable/round_button"
+		android:backgroundTint="@color/colorAccent"
+		android:text="@string/awayteam"
+		android:textSize="46sp"
+		android:textAllCaps="false"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintTop_toBottomOf="@id/hometeambtn"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		android:layout_marginTop="38dp"/>
+
+    <Button
+		android:id="@+id/durationbtn"
+		android:layout_width="235dp"
+		android:layout_height="75dp"
+		android:background="@drawable/round_button"
+		android:text="@string/duration"
+		android:backgroundTint="@color/colorPrimaryDark"
+		android:textSize="46sp"
+		android:textColor="@color/colorPrimaryLight"
+		android:textAllCaps="false"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintTop_toBottomOf="@id/awayteambtn"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintLeft_toLeftOf="parent"
+		android:layout_marginTop="38dp"/>
+
+    <TextView
+		android:id="@+id/kickoffbtn"
+		android:layout_width="230dp"
+		android:layout_height="70dp"
+		app:layout_constraintTop_toBottomOf="@id/durationbtn"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:text="@string/kickoff"
+		android:background="@drawable/round_button"
+		android:textSize="46sp"
+		android:textAllCaps="false"
+		android:layout_marginTop="38dp"
+		android:fontFamily="@string/universalFont"
+		android:textAlignment="center"
+		android:textColor="@color/colorPrimaryDark"/>
+
+</android.support.constraint.ConstraintLayout>

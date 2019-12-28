@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:background="@color/colorPrimary"
+    tools:context=".EventActivity">
+
+	<TextView
+		android:id="@+id/teamlabel"
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:text="Team"
+		android:textStyle="bold"
+		android:textColor="@color/colorPrimaryDark"
+		android:textSize="40sp"
+		android:shadowColor="@color/colorPrimaryDark"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toTopOf="parent"
+		android:layout_marginTop="37dp"/>
+
+	<RadioGroup
+		android:layout_width="wrap_content"
+		android:id="@+id/teamselectradio"
+		android:orientation="horizontal"
+		app:layout_constraintTop_toBottomOf="@id/teamlabel"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_height="wrap_content">
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="@string/hometeam"
+			android:buttonTint="@color/colorPrimaryDark"
+			android:textSize="25sp"
+			android:fontFamily="@string/universalFont"
+			android:id="@+id/hometeamradio"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:id="@+id/awayteamradio"
+			android:textSize="25sp"
+			android:buttonTint="@color/colorPrimaryDark"
+			android:layout_marginStart="20dp"
+			android:fontFamily="@string/universalFont"
+			android:text="@string/awayteam"/>
+
+	</RadioGroup>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/eventlabel"
+		android:text="Event"
+		android:textSize="40sp"
+		android:textStyle="bold"
+		android:textColor="@color/colorPrimaryDark"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintTop_toBottomOf="@id/teamselectradio"
+		android:layout_marginTop="38dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"/>
+
+	<RadioGroup
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/eventselectradio"
+		app:layout_constraintTop_toBottomOf="@id/eventlabel"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent">
+
+		<RadioButton
+			android:id="@+id/goalradio"
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:buttonTint="@color/colorPrimaryDark"
+			android:text="Goal"
+			android:textSize="25sp"
+			android:fontFamily="@string/universalFont"
+			android:textColor="@color/colorPrimaryDark"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Yellow Card"
+			android:id="@+id/yellowradio"
+			android:buttonTint="@color/colorPrimaryDark"
+			android:textSize="25sp"
+			android:fontFamily="@string/universalFont"
+			android:textColor="@color/colorPrimaryDark"/>
+
+		<RadioButton
+			android:layout_width="wrap_content"
+			android:layout_height="wrap_content"
+			android:text="Red Card"
+			android:textSize="25sp"
+			android:buttonTint="@color/colorPrimaryDark"
+			android:id="@+id/redradio"
+			android:fontFamily="@string/universalFont"
+			android:textColor="@color/colorPrimaryDark"/>
+
+	</RadioGroup>
+
+	<TextView
+		android:layout_width="wrap_content"
+		android:layout_height="wrap_content"
+		android:id="@+id/playerlabel"
+		android:text="Player"
+		app:layout_constraintTop_toBottomOf="@id/eventselectradio"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		android:layout_marginTop="37dp"
+		android:textSize="40sp"
+		android:textColor="@color/colorPrimaryDark"
+		android:fontFamily="@string/universalFont"
+		android:textStyle="bold"/>
+
+	<Spinner
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:id="@+id/playerdropdown"
+		android:layout_marginTop="10dp"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintTop_toBottomOf="@id/playerlabel"
+		android:spinnerMode="dialog"/>
+
+	<Button
+		android:id="@+id/selectplayer"
+		android:layout_width="120dp"
+		android:layout_height="wrap_content"
+		android:text="Select"
+		android:textSize="30sp"
+		android:textAllCaps="false"
+		android:includeFontPadding="false"
+		android:background="@drawable/round_button"
+		android:fontFamily="@string/universalFont"
+		app:layout_constraintLeft_toLeftOf="parent"
+		app:layout_constraintRight_toRightOf="parent"
+		app:layout_constraintBottom_toBottomOf="parent"
+		android:layout_marginBottom="40dp"/>
+
+</android.support.constraint.ConstraintLayout>
