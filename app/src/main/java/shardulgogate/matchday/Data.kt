@@ -36,7 +36,7 @@ class Player(val firstName: String,val lastName: String, val shirtNum: Int) {
 	}
 }
 
-class Event(val minute: Int,val eventType: String,val player: Player)
+class Event(val minute: Int,val eventType: String,val player: Player,val eventTeam: Team)
 
 var matchTime: Int=50
 var matchTimeModified: Boolean=false
@@ -49,4 +49,4 @@ lateinit var matchDayDB: DatabaseHelper
 
 var currTeam=Team("")
 
-val event= arrayListOf<Event>()
+val event: ArrayList<Event> = arrayListOf()

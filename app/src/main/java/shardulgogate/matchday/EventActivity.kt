@@ -48,21 +48,21 @@ class EventActivity : AppCompatActivity() {
 		if(goalradio.isChecked) {
 			player.goals+=1
 			currTeam.goals+=1
-			event.add(Event(matchMins+1,"goal",player))
+			event.add(Event(matchMins+1,"goal",player, currTeam))
 		}
 		else if(yellowradio.isChecked) {
 			if(player.isBooked) {
 				player.isSentOff=true
-				event.add(Event(matchMins+1,"red",player))
+				event.add(Event(matchMins+1,"red",player, currTeam))
 			}
 			else {
 				player.isBooked=true
-				event.add(Event(matchMins+1,"yellow",player))
+				event.add(Event(matchMins+1,"yellow",player, currTeam))
 			}
 		}
 		else if(redradio.isChecked) {
 			player.isSentOff=true
-			event.add(Event(matchMins+1,"red",player))
+			event.add(Event(matchMins+1,"red",player, currTeam))
 		}
 		else {
 			Toast.makeText(this,"No event selected",Toast.LENGTH_SHORT).show()

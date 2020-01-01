@@ -88,6 +88,7 @@ class MatchActivity : AppCompatActivity(),Runnable {
 				clockView.text="$matchTime+$extraTime:00"
 				resumeBtn.isEnabled=false
 				pauseBtn.isEnabled=false
+				matchPaused=true
 				handler.removeCallbacks(this)
 			}
 		}
@@ -130,13 +131,17 @@ class MatchActivity : AppCompatActivity(),Runnable {
 	}
 
 	private fun showHighlights() {
-		Toast.makeText(this,"Coming soon",Toast.LENGTH_SHORT).show()
+		pauseCode()
+		Intent(this,HighlightsActivity::class.java).also {
+			startActivity(it)
+		}
 	}
 
 	private fun quit() {
 		val confirmQuit: AlertDialog.Builder=AlertDialog.Builder(this)
 		confirmQuit.setMessage("Do you want to quit the match?")
 		confirmQuit.setPositiveButton("Yes"){ _, _ ->
+			showHighlights()
 			homeTeam.resetStats()
 			awayTeam.resetStats()
 			event.clear()

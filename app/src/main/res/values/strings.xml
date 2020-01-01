@@ -1,12 +1,12 @@
 <resources>
-    <string name="app_name">MatchDay</string>
-    <string name="duration">Duration</string>
-    <string name="universalFont" translatable="false">casual</string>
-    <string name="hometeam">Home Team</string>
-    <string name="awayteam">Away Team</string>
-    <string name="kickoff">Kick-Off</string>
-    <string name="firstname">First Name</string>
-    <string name="lastname">Last Name</string>
-    <string name="shirtnum">Shirt Number</string>
-    <string name="settime">Set Time</string>
+	<string name="app_name">MatchDay</string>
+	<string name="duration">Duration</string>
+	<string name="universalFont" translatable="false">casual</string>
+	<string name="hometeam">Home Team</string>
+	<string name="awayteam">Away Team</string>
+	<string name="kickoff">Kick-Off</string>
+	<string name="firstname">First Name</string>
+	<string name="lastname">Last Name</string>
+	<string name="shirtnum">Shirt Number</string>
+	<string name="settime">Set Time</string>
 </resources>
